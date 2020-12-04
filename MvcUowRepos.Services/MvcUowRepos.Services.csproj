@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,7 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IMvcUowReposServices\IUserService.cs" />
+    <Compile Include="MvcUowReposServices\UserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvcUowRepos.Model\MvcUowRepos.Model.csproj">
+      <Project>{DA323E54-099C-477C-A5B9-424EEF1C0E6A}</Project>
+      <Name>MvcUowRepos.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcUowRepos.Repository\MvcUowRepos.Repository.csproj">
+      <Project>{CC61A43A-A424-4A62-98FD-78BBD2BBC58D}</Project>
+      <Name>MvcUowRepos.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

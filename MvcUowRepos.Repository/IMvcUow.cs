@@ -8,5 +8,6 @@ namespace MvcUowRepos.Repository
 {
     public interface IMvcUow
     {
+        IMvcRepository<User> UserRepository { get; }
     }
 }
